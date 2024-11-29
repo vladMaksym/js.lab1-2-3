@@ -27,7 +27,7 @@ function checkExams() {
         if (daysDiff === 0) {
             resultHTML += `<p>Сьогодні ${exam.room ? `іспит з предмету "${exam.subject}" Аудиторія ${exam.room}.` : `іспит з предмету "${exam.subject}". Невідоме місце проведення іспиту.`}</p>`;
         } else if (daysDiff === 1) {
-            resultHTML += `<p>Завтра консультація по "${exam.subject}". ${exam.room ? `Аудиторія ${exam.room}` : 'Невідоме місце проведення консультації.'}</p>`;
+            resultHTML += `<p>Сьогодні консультація по "${exam.subject}". ${exam.room ? `Аудиторія ${exam.room}` : 'Невідоме місце проведення консультації.'}</p>`;
         }
     });
 

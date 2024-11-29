@@ -25,13 +25,11 @@ class CentralApartment extends Apartment {
         this.district = district;
     }
 
-    // Рахуємо ціну з надбавкою на вартість квадратного метра
     calculatePriceWithSurcharge() {
-        let pricePerMeterWithSurcharge = this.pricePerMeter * 1.01;  // Вартість метра з надбавкою
-        return pricePerMeterWithSurcharge * this.area;  // Остаточна ціна з надбавкою
+        let pricePerMeterWithSurcharge = this.pricePerMeter * 1.01;
+        return pricePerMeterWithSurcharge * this.area;
     }
 
-    // Оновлений метод для виведення результатів
     renderResult() {
         let result = super.renderBaseResult();
         if (this.district && this.district.toLowerCase() === "центр" || this.district.toLowerCase() === "печерськ" || this.district.toLowerCase() === "липки" || this.district.toLowerCase() === "шевченківський") {
@@ -57,7 +55,7 @@ document.getElementById("apartmentForm").addEventListener("submit", function(eve
     const district = document.getElementById("district").value.trim();
 
     let apartment;
-    if (district.toLowerCase() === "центр") {
+    if (district.toLowerCase() === "центр"|| district.toLowerCase() === "печерськ" || district.toLowerCase() === "липки" || district.toLowerCase() === "шевченківський") {
         apartment = new CentralApartment(name, pricePerMeter, area, district);
         document.getElementById("baseText").innerHTML = apartment.renderBaseResult();
         document.getElementById("centralText").innerHTML = apartment.renderResult();
