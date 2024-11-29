@@ -13,7 +13,7 @@ function calculateDaysDifference(dateText) {
     parsedDate.setHours(0, 0, 0, 0);
 
     const timeDiff = Math.abs(currentDate.getTime() - parsedDate.getTime());
-    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));  // Різниця в днях
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
     return daysDiff;
 }
 

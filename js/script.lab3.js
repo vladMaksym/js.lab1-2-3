@@ -34,7 +34,7 @@ class CentralApartment extends Apartment {
     // Оновлений метод для виведення результатів
     renderResult() {
         let result = super.renderBaseResult();
-        if (this.district && this.district.toLowerCase() === "центр" || this.district.toLowerCase() === "Печерськ" || this.district.toLowerCase() === "Липки" || this.district.toLowerCase() === "Шевченківський") {
+        if (this.district && this.district.toLowerCase() === "центр" || this.district.toLowerCase() === "печерськ" || this.district.toLowerCase() === "липки" || this.district.toLowerCase() === "шевченківський") {
             const pricePerMeterWithSurcharge = this.pricePerMeter * 1.01;
             result = `
                 <p><strong>Назва:</strong> ${this.name}</p>
